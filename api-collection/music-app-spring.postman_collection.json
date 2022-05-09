@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "bea036f2-3652-491a-8116-cd41df6347fc",
+		"name": "music-app-spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APIs",
+			"item": [
+				{
+					"name": "podcasts/getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/podcasts/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"podcasts",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "podcasts/addPodcast",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Brain Sparks\",\n    \"artist\": \"\",\n    \"description\": \"This podcast is hosted by usability and UI design expert, Jared Spool. It offers tona of value with many industry leaders sharing insights on usability, UX design, and UI design.\",\n    \"source\": \"https://www.uie.com/brainsparks/topics/podcasts/\",\n    \"audio\": \"https://downloads.uie.fm/7/389/asset.uie.com/BSAL/UIEP015_Shipe_Goodwin.mp3\",\n    \"image\": \"https://uie.fm/assets/album-art/the-uie-podcast.png\",\n    \"title\": \"The Tension of Art and Science When Communicating Complex User Research\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/podcasts/addPodcast",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"podcasts",
+								"addPodcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "podcasts/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Brain Sparks Updated\",\n    \"artist\": \"\",\n    \"description\": \"This podcast is hosted by usability and UI design expert, Jared Spool. It offers tona of value with many industry leaders sharing insights on usability, UX design, and UI design.\",\n    \"source\": \"https://www.uie.com/brainsparks/topics/podcasts/\",\n    \"audio\": \"https://downloads.uie.fm/7/389/asset.uie.com/BSAL/UIEP015_Shipe_Goodwin.mp3\",\n    \"image\": \"https://uie.fm/assets/album-art/the-uie-podcast.png\",\n    \"title\": \"The Tension of Art and Science When Communicating Complex User Research\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/podcasts/updatePodcast",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"podcasts",
+								"updatePodcast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "podcasts/findById/{podcastId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/podcasts/findById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"podcasts",
+								"findById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "podcasts/findById/{podcastId} Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/podcasts/deleteById/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"podcasts",
+								"deleteById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
